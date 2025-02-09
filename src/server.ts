@@ -2,6 +2,7 @@ import { Server } from 'http'
 import app from './app'
 import config from './app/config'
 import mongoose from 'mongoose'
+import 'dotenv/config';
 
 const port = config.PORT || 5001
 let server:Server
@@ -36,3 +37,4 @@ process.on('uncaughtException', () => {
   console.log(`😈 uncaughtException is detected , shutting down ...`);
   process.exit(1);
 });
+
